@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Earthquake !</title>
+  </head>
+  <body>
+    <body><center>
+      <table style="border: 1px solid black">
+        <tbody>
+          <tr>
+            <th width="35%" style="background-color: #CCFFCC; margin: 5px">Time</th>
+            <th style="background-color: #CCFFCC; margin: 5px">Place</th>
+            <th style="background-color: #CCFFCC; margin: 5px">Magnitude</th>
+          </tr>
+          {% for quake in quakelist %}
+             <tr>
+               <td>{{ quake['time'] }}</td>
+               <td>{{ quake['place'] }}</td>
+               <td>{{ quake['mag'] }}</td>
+             </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+	</center>
+    </body>
+</html>
